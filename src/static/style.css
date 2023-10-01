@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.projectInfo,
+.form {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    display: block;
+    margin: 0 8px;
+    padding: 5px 10px;
+    border: 1px solid #313131;
+    border-radius: 5px;
+    outline: none;
+}
+
+.btn {
+    background: green;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.projectInfo__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectInfo__item__key {
+    padding-right: 5px;
+    font-style: italic;
+}
+
+.projectInfo__item__value {
+    font-weight: 700;
+}
+
+.canvasWrapper {
+    position: relative;
+    width: 90%;
+    min-height: 200px;
+    height: calc(100vh - 170px);
+    margin: 30px auto;
+    border: 2px solid #313131;
+    background: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas {
+    position: relative;
+    z-index: 1;
+    background: #efefef;
+    margin: auto;
+    height: 300px;
+}
+
+.canvas__element {
+    position: absolute;
+    background: #000;
+    transform-origin: top left;
+    z-index: 2;
+}
+
+.canvas__boundingBox {
+    position: absolute;
+    border: 2px solid red;
+    background: transparent;
+    z-index: 3;
+}
+
+.canvas__element__center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.canvas__element__center__rotationInfo {
+    display: block;
+    transform: translate(10px, -15px);
+    font-size: 15px;
+    white-space: nowrap;
+    color: #fff;
+}
+
+.errorInfo {
+    padding-top: 10px;
+    color: red;
+    font-size: 16px;
+    text-align: center;
+}
+
+@media(max-width: 768px) {
+    .canvas__element__center__rotationInfo {
+        font-size: 12px;
+    }
+
+    .canvas__boundingBox {
+        border-width: 1px;
+    }
+
+    .form, .form *,
+    .projectInfo__item * {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 576px) {
+    .canvas__element__center__rotationInfo {
+        font-size: 10px;
+        transform: translate(8px, -10px);
+    }
+
+    .form label {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .canvasWrapper {
+        height: calc(100vh - 220px);
+    }
+}

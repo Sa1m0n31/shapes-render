@@ -1,0 +1,9 @@
+UWAGI DO AUTORA API:
+1. Projekty nie mają unikalnego id. Np. projekt o id "cln7sqfmb001r08l1edb8gwto-4293943607127295" i "ab-4293943607127295" zwracają to samo.
+2. Wartości atrybutu "color" w niektórych elementach niektórych projektów mają niepoprawne dane, np. kod hex koloru ma pięć cyfr zamiast sześciu.
+3. Wartości atrybutu id w obiektach będących elementami tablicy project.items są stringami, które zawsze mają strukturę "$LICZBA". Należałoby to uprościć poprzez zamianę typu tego atrybutu na int.
+
+TESTY DLA APLIKACJI:
+1. Testy sprawdzające wyświetlanie atrybutów nazwy i id projektu lub błędu w zależności od wartości id wpisanej do inputa.
+2. Testy sprawdzające poprawność renderowania elementów.
+3. Testy sprawdzające zachowanie aplikacji przy zmianie rozmiaru okna przeglądarki.
